@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Σχολή Οδηγών {BUSINESS_NAME} - {AREA}</title>
+    <meta name="description" content="Η κορυφαία σχολή οδηγών στην περιοχή {AREA}. Δίπλωμα αυτοκινήτου, μηχανής και επαγγελματικά.">
+    
+    <!-- Tailwind CSS (No install needed) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts: Manrope (Modern & Trustworthy) -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS Variables & Animation -->
+    <style>
+        :root {
+            /* Default to Blue if JS fails */
+            --primary: #2563eb; 
+            --primary-dark: #1e40af;
+        }
+        
+        body { font-family: 'Manrope', sans-serif; }
+        
+        /* Smooth scrolling */
+        html { scroll-behavior: smooth; }
+
+        /* Animation for the "Demo" widget */
+        @keyframes floatIn {
+            0% { transform: translateY(100px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+        .demo-widget-enter { animation: floatIn 0.8s ease-out forwards; }
+    </style>
+    
+    <!-- Tailwind Config for Dynamic Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: 'var(--primary)',
+                        brandDark: 'var(--primary-dark)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased flex flex-col min-h-screen">
+
+    <!-- TOP BAR (Mobile/Desktop info) -->
+    <div class="bg-gray-900 text-gray-300 py-2 text-sm">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <span><i class="fas fa-map-marker-alt mr-2"></i> {AREA}</span>
+            <span class="hidden md:inline">Εκπαίδευση Νέων Οδηγών από το 1998</span>
+            <a href="tel:{PHONE}" class="font-bold text-white hover:text-brand transition"><i class="fas fa-phone mr-1"></i> {PHONE}</a>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="bg-white sticky top-0 z-40 shadow-md border-b border-gray-100">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center gap-3">
+                <div class="bg-brand text-white w-10 h-10 rounded-lg flex items-center justify-center text-xl font-bold shadow-lg">
+                    <i class="fas fa-car-side"></i>
+                </div>
+                <div class="leading-tight">
+                    <h1 class="text-xl font-extrabold text-gray-900 tracking-tight">{BUSINESS_NAME}</h1>
+                    <p class="text-xs text-gray-500 font-semibold tracking-wide">ΣΧΟΛΗ ΟΔΗΓΩΝ</p>
+                </div>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex gap-8 font-semibold text-gray-600">
+                <a href="#services" class="hover:text-brand transition">Υπηρεσίες</a>
+                <a href="#about" class="hover:text-brand transition">Η Σχολή</a>
+                <a href="#contact" class="hover:text-brand transition">Επικοινωνία</a>
+            </div>
+
+            <!-- Mobile Call Button -->
+            <a href="tel:{PHONE}" class="md:hidden bg-brand text-white px-4 py-2 rounded-full font-bold shadow-md hover:bg-brandDark transition text-sm">
+                <i class="fas fa-phone mr-2"></i> Καλέστε
+            </a>
+            
+            <!-- Desktop CTA -->
+            <a href="tel:{PHONE}" class="hidden md:inline-flex bg-brand text-white px-6 py-2.5 rounded-lg font-bold shadow-lg hover:bg-brandDark hover:-translate-y-0.5 transition transform">
+                <i class="fas fa-phone-alt mr-2 mt-1"></i> {PHONE}
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="relative bg-gray-900 text-white pt-20 pb-32 overflow-hidden">
+        <!-- Dynamic Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="{IMAGE_URL}" alt="Driving School" class="w-full h-full object-cover opacity-30">
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 container mx-auto px-4 text-center md:text-left">
+            <div class="max-w-2xl">
+                <div class="inline-block bg-brand/20 border border-brand/40 text-brand-100 px-4 py-1 rounded-full text-sm font-bold mb-6 backdrop-blur-sm">
+                    📍 Η Νο1 Σχολή στην περιοχή {AREA}
+                </div>
+                <h2 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+                    Οδήγησε με <span class="text-brand">Ασφάλεια</span> και <span class="text-brand">Αυτοπεποίθηση</span>.
+                </h2>
+                <p class="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
+                    Μάθετε να οδηγείτε δίπλα σε έμπειρους εκπαιδευτές. Σύγχρονα οχήματα, ευέλικτα ωράρια και εγγυημένη επιτυχία στις εξετάσεις.
+                </p>
+                <div class="flex flex-col md:flex-row gap-4">
+                    <a href="tel:{PHONE}" class="bg-brand hover:bg-brandDark text-white text-lg px-8 py-4 rounded-xl font-bold shadow-xl transition transform hover:scale-105 text-center">
+                        Κλείσε Μάθημα Τώρα
+                    </a>
+                    <a href="#services" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white text-lg px-8 py-4 rounded-xl font-bold transition text-center">
+                        Δείτε τις Τιμές
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SERVICES GRID -->
+    <section id="services" class="relative -mt-20 z-20 pb-20">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition border-t-4 border-brand group">
+                    <div class="w-14 h-14 bg-brand/10 rounded-xl flex items-center justify-center text-brand text-2xl mb-6 group-hover:bg-brand group-hover:text-white transition">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Δίπλωμα Αυτοκινήτου</h3>
+                    <p class="text-gray-600 mb-6">Πλήρης θεωρητική και πρακτική εκπαίδευση για νέους οδηγούς. Μάθετε σε σύγχρονα αυτοκίνητα.</p>
+                    <a href="tel:{PHONE}" class="text-brand font-bold hover:text-brandDark">Περισσότερα <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition border-t-4 border-brand group">
+                    <div class="w-14 h-14 bg-brand/10 rounded-xl flex items-center justify-center text-brand text-2xl mb-6 group-hover:bg-brand group-hover:text-white transition">
+                        <i class="fas fa-motorcycle"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Δίπλωμα Μηχανής</h3>
+                    <p class="text-gray-600 mb-6">Κατηγορίες Α1, Α2 και Α. Εκπαίδευση με έμφαση στην ισορροπία και την ασφάλεια του αναβάτη.</p>
+                    <a href="tel:{PHONE}" class="text-brand font-bold hover:text-brandDark">Περισσότερα <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition border-t-4 border-brand group">
+                    <div class="w-14 h-14 bg-brand/10 rounded-xl flex items-center justify-center text-brand text-2xl mb-6 group-hover:bg-brand group-hover:text-white transition">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Ανανεώσεις / ΠΕΙ</h3>
+                    <p class="text-gray-600 mb-6">Διεκπεραιώσεις, ανανεώσεις διπλωμάτων και επεκτάσεις επαγγελματικών κατηγοριών γρήγορα.</p>
+                    <a href="tel:{PHONE}" class="text-brand font-bold hover:text-brandDark">Περισσότερα <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST SIGNALS -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-3xl font-bold mb-12">Γιατί να επιλέξετε την {BUSINESS_NAME};</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="p-4">
+                    <div class="text-4xl text-brand mb-2"><i class="fas fa-check-circle"></i></div>
+                    <div class="font-bold text-lg">98% Επιτυχία</div>
+                    <div class="text-sm text-gray-500">Στις εξετάσεις</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl text-brand mb-2"><i class="fas fa-clock"></i></div>
+                    <div class="font-bold text-lg">Ευέλικτα Ωράρια</div>
+                    <div class="text-sm text-gray-500">Πρωί & Απόγευμα</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl text-brand mb-2"><i class="fas fa-wallet"></i></div>
+                    <div class="font-bold text-lg">Καλές Τιμές</div>
+                    <div class="text-sm text-gray-500">Πακέτα προσφορών</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl text-brand mb-2"><i class="fas fa-car-alt"></i></div>
+                    <div class="font-bold text-lg">Νέα Οχήματα</div>
+                    <div class="text-sm text-gray-500">Ασφαλή & Καθαρά</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER / CONTACT -->
+    <footer id="contact" class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl font-bold mb-6">Ξεκινήστε τα μαθήματα σήμερα</h2>
+                <p class="text-gray-400 mb-8 text-lg">Μην χάνετε χρόνο. Καλέστε μας για να ενημερωθείτε για τα δικαιολογητικά και το κόστος.</p>
+                
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-brand rounded-full flex items-center justify-center text-xl">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <div class="text-sm text-gray-400">Τηλέφωνο Επικοινωνίας</div>
+                            <a href="tel:{PHONE}" class="text-2xl font-bold hover:text-brand transition">{PHONE}</a>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center text-xl">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <div class="text-sm text-gray-400">Περιοχή</div>
+                            <div class="text-xl font-bold">{AREA}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Embed Map (Generic Search based on Area + Driving School) -->
+            <div class="h-64 bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-700">
+                <iframe 
+                    width="100%" 
+                    height="100%" 
+                    frameborder="0" 
+                    scrolling="no" 
+                    marginheight="0" 
+                    marginwidth="0" 
+                    src="https://maps.google.com/maps?q=Driving+School+{AREA}&t=&z=14&ie=UTF8&iwloc=&output=embed">
+                </iframe>
+            </div>
+        </div>
+        <div class="text-center mt-12 pt-8 border-t border-gray-800 text-gray-500 text-sm">
+            © 2025 {BUSINESS_NAME}. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- ============================================ -->
+    <!-- INTERACTIVE DEMO TOOLBAR (DELETE BEFORE SALE) -->
+    <!-- ============================================ -->
+    <div id="demo-toolbar" class="demo-widget-enter fixed bottom-6 right-6 bg-white p-4 rounded-2xl shadow-2xl border border-gray-200 z-50 flex flex-col items-center gap-3 w-auto max-w-[200px]">
+        
+        <!-- Close Button -->
+        <button onclick="document.getElementById('demo-toolbar').style.display='none'" class="absolute -top-2 -right-2 bg-gray-200 text-gray-600 rounded-full w-6 h-6 text-xs flex items-center justify-center hover:bg-gray-300">✕</button>
+        
+        <div class="text-center">
+            <p class="text-xs font-extrabold text-gray-800 uppercase tracking-widest mb-1">ΔΙΑΛΕΞΤΕ ΧΡΩΜΑ</p>
+            <p class="text-[10px] text-gray-500 leading-tight">Πατήστε για αλλαγή</p>
+        </div>
+        
+        <div class="grid grid-cols-3 gap-2">
+            <!-- Blue (Default) -->
+            <button onclick="changeTheme('#2563eb', '#1e40af')" class="w-8 h-8 rounded-full bg-[#2563eb] ring-2 ring-transparent hover:ring-gray-300 transition shadow-sm" title="Blue"></button>
+            <!-- Red -->
+            <button onclick="changeTheme('#dc2626', '#b91c1c')" class="w-8 h-8 rounded-full bg-[#dc2626] ring-2 ring-transparent hover:ring-gray-300 transition shadow-sm" title="Red"></button>
+            <!-- Green -->
+            <button onclick="changeTheme('#16a34a', '#15803d')" class="w-8 h-8 rounded-full bg-[#16a34a] ring-2 ring-transparent hover:ring-gray-300 transition shadow-sm" title="Green"></button>
+            <!-- Orange -->
+            <button onclick="changeTheme('#ea580c', '#c2410c')" class="w-8 h-8 rounded-full bg-[#ea580c] ring-2 ring-transparent hover:ring-gray-300 transition shadow-sm" title="Orange"></button>
+            <!-- Purple -->
+            <button onclick="changeTheme('#7c3aed', '#6d28d9')" class="w-8 h-8 rounded-full bg-[#7c3aed] ring-2 ring-transparent hover:ring-gray-300 transition shadow-sm" title="Purple"></button>
+            <!-- Black -->
+            <button onclick="changeTheme('#111827', '#000000')" class="w-8 h-8 rounded-full bg-[#111827] ring-2 ring-transparent hover:ring-gray-300 transition shadow-sm" title="Black"></button>
+        </div>
+    </div>
+
+    <script>
+        // Color Switching Logic
+        function changeTheme(primary, dark) {
+            const root = document.documentElement;
+            root.style.setProperty('--primary', primary);
+            root.style.setProperty('--primary-dark', dark);
+            
+            // Persist choice (optional)
+            localStorage.setItem('theme-primary', primary);
+            localStorage.setItem('theme-dark', dark);
+        }
+
+        // Load saved preference
+        const savedPrimary = localStorage.getItem('theme-primary');
+        const savedDark = localStorage.getItem('theme-dark');
+        if (savedPrimary && savedDark) {
+            changeTheme(savedPrimary, savedDark);
+        }
+    </script>
+
+</body>
+</html>

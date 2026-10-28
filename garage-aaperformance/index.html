@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Συνεργείο Αυτοκινήτων AAPerformance Service - Θεσσαλονίκη (⭐ 4.9/5)</title>
+    <meta name="description" content="Εξειδικευμένο συνεργείο αυτοκινήτων στην περιοχή Θεσσαλονίκη (⭐ 4.9/5). Service, Διαγνωστικός Έλεγχος, Φρένα, Προετοιμασία ΚΤΕΟ.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Roboto Condensed for an "Industrial/Mechanical" look -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #dc2626; /* Default: Mechanic Red */
+            --primary-dark: #b91c1c;
+        }
+        body { font-family: 'Roboto Condensed', sans-serif; }
+        html { scroll-behavior: smooth; }
+        
+        .bg-pattern {
+            background-image: radial-gradient(#4b5563 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        
+        @keyframes floatIn {
+            0% { transform: translateY(100px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+        .demo-widget-enter { animation: floatIn 0.8s ease-out forwards; }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: 'var(--primary)',
+                        brandDark: 'var(--primary-dark)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100 text-gray-800 flex flex-col min-h-screen">
+
+    <!-- TOP BAR -->
+    <div class="bg-gray-900 text-gray-400 py-2 text-sm border-b border-gray-800">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <span><i class="fas fa-wrench mr-2 text-brand"></i> Εξειδικευμένο Service Θεσσαλονίκη (⭐ 4.9/5)</span>
+            <a href="tel:2314071040" class="font-bold text-white hover:text-brand transition"><i class="fas fa-phone mr-1"></i> 2314071040</a>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="bg-white sticky top-0 z-40 shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="bg-gray-900 text-white w-12 h-12 rounded flex items-center justify-center text-xl font-bold shadow border-b-4 border-brand">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <div class="leading-tight">
+                    <h1 class="text-2xl font-bold text-gray-900 uppercase tracking-tighter">AAPerformance Service</h1>
+                    <p class="text-xs text-brand font-bold tracking-widest uppercase">AUTO SERVICE</p>
+                </div>
+            </div>
+
+            <div class="hidden md:flex gap-8 font-bold text-gray-700 uppercase text-sm tracking-wide">
+                <a href="#services" class="hover:text-brand transition">Υπηρεσιες</a>
+                <a href="#why-us" class="hover:text-brand transition">Η Εγγυηση Μας</a>
+                <a href="#contact" class="hover:text-brand transition">Ραντεβου</a>
+            </div>
+
+            <a href="tel:2314071040" class="bg-brand text-white px-6 py-2 rounded font-bold shadow hover:bg-brandDark transition uppercase tracking-wide">
+                <i class="fas fa-phone mr-2"></i> Καλεστε
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="relative bg-gray-900 text-white py-24 border-b-8 border-brand">
+        <!-- Dark overlay on image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?q=80&w=1000&auto=format&fit=crop" alt="Car Garage" class="w-full h-full object-cover opacity-20 grayscale">
+            <div class="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/80 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 container mx-auto px-4">
+            <div class="max-w-2xl">
+                <div class="inline-block bg-brand text-white px-3 py-1 text-sm font-bold uppercase tracking-wider mb-4">
+                    🛠️ Αξιοπιστο Συνεργειο στην περιοχη Θεσσαλονίκη (⭐ 4.9/5)
+                </div>
+                <h2 class="text-5xl md:text-7xl font-bold mb-6 leading-none uppercase">
+                    Το αυτοκινητο σας <br><span class="text-brand">στα καλυτερα χερια</span>
+                </h2>
+                <p class="text-xl text-gray-300 mb-8 max-w-lg">
+                    Γενικό Service, Διαγνωστικός Έλεγχος και Επισκευές με εγγύηση εργασιών. Κλείστε ραντεβού άμεσα.
+                </p>
+                <div class="flex flex-col md:flex-row gap-4">
+                    <a href="tel:2314071040" class="bg-brand hover:bg-brandDark text-white text-lg px-8 py-4 rounded font-bold shadow-lg transition uppercase tracking-wide text-center">
+                        Κλειστε Ραντεβου
+                    </a>
+                    <a href="#services" class="border-2 border-white hover:bg-white hover:text-gray-900 text-white text-lg px-8 py-4 rounded font-bold transition uppercase tracking-wide text-center">
+                        Οι Υπηρεσιες μας
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SERVICES GRID -->
+    <section id="services" class="py-20 bg-gray-100 bg-pattern">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-bold text-gray-900 uppercase">Οι Υπηρεσιες μας</h3>
+                <div class="w-24 h-1 bg-brand mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 shadow-lg border-b-4 border-brand hover:-translate-y-1 transition duration-300">
+                    <div class="text-brand text-4xl mb-4"><i class="fas fa-oil-can"></i></div>
+                    <h4 class="text-xl font-bold mb-3 uppercase">Γενικο Service</h4>
+                    <p class="text-gray-600">Αλλαγή λαδιών, φίλτρων και γενικός έλεγχος 20 σημείων για την ασφάλειά σας.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white p-8 shadow-lg border-b-4 border-brand hover:-translate-y-1 transition duration-300">
+                    <div class="text-brand text-4xl mb-4"><i class="fas fa-laptop-medical"></i></div>
+                    <h4 class="text-xl font-bold mb-3 uppercase">Ηλεκτρονικη Διαγνωση</h4>
+                    <p class="text-gray-600">Εντοπισμός βλαβών με σύγχρονα διαγνωστικά μηχανήματα ακριβείας.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white p-8 shadow-lg border-b-4 border-brand hover:-translate-y-1 transition duration-300">
+                    <div class="text-brand text-4xl mb-4"><i class="fas fa-clipboard-check"></i></div>
+                    <h4 class="text-xl font-bold mb-3 uppercase">Προετοιμασια ΚΤΕΟ</h4>
+                    <p class="text-gray-600">Ελέγχουμε και επισκευάζουμε το όχημά σας ώστε να περάσει ΚΤΕΟ με την πρώτη.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="bg-white p-8 shadow-lg border-b-4 border-brand hover:-translate-y-1 transition duration-300">
+                    <div class="text-brand text-4xl mb-4"><i class="fas fa-car-battery"></i></div>
+                    <h4 class="text-xl font-bold mb-3 uppercase">Ηλεκτρολογικα / Μπαταριες</h4>
+                    <p class="text-gray-600">Αλλαγή μπαταρίας, επισκευή μίζας, δυναμό και έλεγχος ηλεκτρικών κυκλωμάτων.</p>
+                </div>
+                <!-- Card 5 -->
+                <div class="bg-white p-8 shadow-lg border-b-4 border-brand hover:-translate-y-1 transition duration-300">
+                    <div class="text-brand text-4xl mb-4"><i class="fas fa-snowflake"></i></div>
+                    <h4 class="text-xl font-bold mb-3 uppercase">Service Air Condition</h4>
+                    <p class="text-gray-600">Συντήρηση, καθαρισμός και συμπλήρωση φρέον για καθαρό αέρα.</p>
+                </div>
+                <!-- Card 6 -->
+                <div class="bg-white p-8 shadow-lg border-b-4 border-brand hover:-translate-y-1 transition duration-300">
+                    <div class="text-brand text-4xl mb-4"><i class="fas fa-cog"></i></div>
+                    <h4 class="text-xl font-bold mb-3 uppercase">Φρενα & Αναρτησεις</h4>
+                    <p class="text-gray-600">Αλλαγή τακάκια, δισκόπλακες και αμορτισέρ για κορυφαίο κράτημα.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST BANNER -->
+    <section class="bg-gray-900 text-white py-16 border-t border-gray-800" id="why-us">
+        <div class="container mx-auto px-4 grid md:grid-cols-4 gap-8 text-center">
+            <div>
+                <div class="text-4xl text-brand mb-2"><i class="fas fa-award"></i></div>
+                <div class="font-bold text-xl uppercase">Γνησια Ανταλλακτικα</div>
+            </div>
+            <div>
+                <div class="text-4xl text-brand mb-2"><i class="fas fa-tools"></i></div>
+                <div class="font-bold text-xl uppercase">Συγχρονος Εξοπλισμος</div>
+            </div>
+            <div>
+                <div class="text-4xl text-brand mb-2"><i class="fas fa-euro-sign"></i></div>
+                <div class="font-bold text-xl uppercase">Τιμιες Τιμες</div>
+            </div>
+            <div>
+                <div class="text-4xl text-brand mb-2"><i class="fas fa-handshake"></i></div>
+                <div class="font-bold text-xl uppercase">Εγγυηση Εργασιων</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="bg-black text-white py-16">
+        <div class="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl font-bold mb-6 uppercase">Χρειαζεστε Service?</h2>
+                <p class="text-gray-400 mb-8 text-lg">Καλέστε μας τώρα για να κλείσετε ραντεβού. Εξυπηρέτηση αυθημερόν για επείγοντα περιστατικά.</p>
+                
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 bg-brand rounded flex items-center justify-center text-xl">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div>
+                        <div class="text-sm text-gray-400 uppercase">Τηλεφωνο</div>
+                        <a href="tel:2314071040" class="text-3xl font-bold hover:text-brand transition">2314071040</a>
+                    </div>
+                </div>
+                
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-gray-800 rounded flex items-center justify-center text-xl">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div>
+                        <div class="text-sm text-gray-400 uppercase">Περιοχη</div>
+                        <div class="text-xl font-bold">Θεσσαλονίκη (⭐ 4.9/5)</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Map -->
+            <div class="h-64 bg-gray-800 rounded shadow-lg border border-gray-700 overflow-hidden">
+                <iframe 
+                    width="100%" 
+                    height="100%" 
+                    frameborder="0" 
+                    scrolling="no" 
+                    marginheight="0" 
+                    marginwidth="0" 
+                    src="https://maps.google.com/maps?q=Car+Service+Θεσσαλονίκη (⭐ 4.9/5)&t=&z=14&ie=UTF8&iwloc=&output=embed">
+                </iframe>
+            </div>
+        </div>
+    </footer>
+
+    <!-- DEMO TOOLBAR -->
+    <div id="demo-toolbar" class="demo-widget-enter fixed bottom-6 right-6 bg-white p-4 rounded shadow-2xl border border-gray-300 z-50 flex flex-col items-center gap-3 w-auto">
+        <button onclick="document.getElementById('demo-toolbar').style.display='none'" class="absolute -top-3 -right-3 bg-red-600 text-white rounded-full w-6 h-6 text-xs flex items-center justify-center shadow">✕</button>
+        <p class="text-[10px] font-bold text-gray-500 uppercase tracking-widest">ΧΡΩΜΑΤΑ</p>
+        <div class="grid grid-cols-4 gap-2">
+            <button onclick="changeTheme('#dc2626', '#991b1b')" class="w-8 h-8 rounded bg-[#dc2626] border border-gray-300 shadow-sm"></button> <!-- Red -->
+            <button onclick="changeTheme('#2563eb', '#1e40af')" class="w-8 h-8 rounded bg-[#2563eb] border border-gray-300 shadow-sm"></button> <!-- Blue -->
+            <button onclick="changeTheme('#eab308', '#ca8a04')" class="w-8 h-8 rounded bg-[#eab308] border border-gray-300 shadow-sm"></button> <!-- Yellow/CAT -->
+            <button onclick="changeTheme('#16a34a', '#15803d')" class="w-8 h-8 rounded bg-[#16a34a] border border-gray-300 shadow-sm"></button> <!-- Green -->
+        </div>
+    </div>
+
+    <script>
+        function changeTheme(primary, dark) {
+            const root = document.documentElement;
+            root.style.setProperty('--primary', primary);
+            root.style.setProperty('--primary-dark', dark);
+        }
+    </script>
+</body>
+</html>
