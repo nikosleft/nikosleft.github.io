@@ -1,0 +1,14 @@
+WEBVTT
+
+00:00:07.780 --> 00:00:10.020
+This is a test of the voice loop.
+
+00:00:10.460 --> 00:00:13.560
+You saw the tool run,
+the avatar changed pose,
+
+00:00:13.860 --> 00:00:15.540
+and now she is speaking the reply.
+
+00:00:15.540 --> 00:00:18.300
+Three states, one loop, all local.
