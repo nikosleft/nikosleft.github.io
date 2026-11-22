@@ -1,4 +1,16 @@
 WEBVTT
 
-00:00:00.000 --> 00:05:00.000
-Silent screen recording of the RelayForge Chaos Lab: a receiver is forced to fail, deliveries retry with backoff, and the queue recovers after the receiver is restored.
+00:00:00.000 --> 00:00:06.950
+The Control Room opens, followed by the Chaos Lab. The demo receiver starts healthy.
+
+00:00:06.950 --> 00:00:11.550
+The receiver is set to return HTTP 500. Generated deliveries build up in the retry queue.
+
+00:00:11.550 --> 00:00:16.150
+The delivery trace shows HTTP 500 attempts persisted by the worker.
+
+00:00:16.150 --> 00:00:22.990
+The receiver returns to HTTP 200. Queued deliveries complete as their next attempts come due.
+
+00:00:22.990 --> 00:00:27.480
+The retry queue reaches zero. The Control Room shows the updated totals.
